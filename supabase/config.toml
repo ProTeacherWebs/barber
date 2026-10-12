@@ -1,0 +1,4 @@
+project_id = "barbershop"
+
+[functions.notifications]
+verify_jwt = false

@@ -1,0 +1,37 @@
+{
+  "name": "barbershop",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n web,api,mini \"npm run dev --workspace web\" \"npm run dev --workspace api\" \"npm run dev --workspace miniapp\"",
+    "dev:web": "npm run dev --workspace web",
+    "dev:api": "npm run dev --workspace api",
+    "dev:miniapp": "npm run dev --workspace miniapp",
+    "build": "npm run build --workspace web",
+    "start": "npm run start --workspace web",
+    "lint": "npm run lint --workspace web",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:seed": "prisma db seed",
+    "db:studio": "prisma studio",
+    "bot:barber-link": "tsx apps/api/src/telegram/create-barber-link.ts",
+    "bot:webhook": "tsx apps/api/src/telegram/register-webhook.ts",
+    "notifications": "tsx apps/api/src/notifications/run.ts",
+    "notifications:schedule": "tsx apps/api/src/notifications/schedule-cron.ts",
+    "notifications:deploy": "tsx apps/api/src/notifications/deploy.ts",
+    "postinstall": "prisma generate"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.19.3",
+    "@types/bcryptjs": "^2.4.6",
+    "bcryptjs": "^3.0.3",
+    "concurrently": "^10.0.5",
+    "prisma": "^6.19.3",
+    "tsx": "^4.23.15"
+  }
+}
