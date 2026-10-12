@@ -12,7 +12,7 @@
     "build": "npm run build --workspace web",
     "start": "npm run start --workspace web",
     "lint": "npm run lint --workspace web",
-    "db:generate": "prisma generate",
+    "db:generate": "node ./scripts/prisma-generate.js",
     "db:migrate": "prisma migrate dev",
     "db:seed": "prisma db seed",
     "db:studio": "prisma studio",
@@ -21,17 +21,19 @@
     "notifications": "tsx apps/api/src/notifications/run.ts",
     "notifications:schedule": "tsx apps/api/src/notifications/schedule-cron.ts",
     "notifications:deploy": "tsx apps/api/src/notifications/deploy.ts",
-    "postinstall": "prisma generate"
+    "postinstall": "node ./scripts/prisma-generate.js"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "prisma": "^6.19.3"
   },
   "devDependencies": {
     "@prisma/client": "^6.19.3",
     "@types/bcryptjs": "^2.4.6",
     "bcryptjs": "^3.0.3",
     "concurrently": "^10.0.5",
-    "prisma": "^6.19.3",
     "tsx": "^4.23.15"
   }
 }
