@@ -1,5 +1,5 @@
 import { afterAll, describe, expect, it } from "vitest";
-import { buildApp } from "../app";
+import { buildApp } from "../build-app";
 import { prisma } from "../prisma";
 
 const phone = `+99890${String(Date.now()).slice(-7)}`;

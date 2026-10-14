@@ -1,5 +1,5 @@
 import { afterAll, describe, expect, it } from "vitest";
-import { buildApp } from "../app";
+import { buildApp } from "../build-app";
 
 describe("админская сессия", () => {
   const app = buildApp({ logger: false });

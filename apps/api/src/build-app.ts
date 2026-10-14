@@ -15,8 +15,10 @@ import { registerAdmin } from "./routes/admin";
 import { registerAnalytics } from "./admin/analytics-routes";
 
 export function buildApp(options?: { logger?: boolean }): FastifyInstance {
-  const app = Fastify({ logger: options?.logger ?? true });
+  return configureApp(Fastify({ logger: options?.logger ?? true }));
+}
 
+export function configureApp(app: FastifyInstance): FastifyInstance {
   const localOrigins = [
     "http://localhost:3000",
     "http://localhost:3010",

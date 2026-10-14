@@ -1,5 +1,5 @@
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
-import { buildApp } from "../app";
+import { buildApp } from "../build-app";
 
 describe("telegram webhook", () => {
   const previousToken = process.env.TELEGRAM_BOT_TOKEN;
