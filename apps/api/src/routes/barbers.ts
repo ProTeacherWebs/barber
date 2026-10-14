@@ -1,6 +1,6 @@
 import type { FastifyInstance } from "fastify";
-import { prisma } from "../prisma";
-import { barberDetailSchema, barberParamsSchema, barberSchema } from "../schemas";
+import { prisma } from "../prisma.js";
+import { barberDetailSchema, barberParamsSchema, barberSchema } from "../schemas.js";
 
 export function registerBarbers(app: FastifyInstance) {
   app.get("/barbers", async () => {

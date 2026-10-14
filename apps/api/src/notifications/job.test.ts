@@ -1,7 +1,7 @@
 import { randomBytes } from "node:crypto";
 import { afterAll, describe, expect, it } from "vitest";
 import type { Prisma } from "@prisma/client";
-import { prisma } from "../prisma";
+import { prisma } from "../prisma.js";
 
 const serviceId = "11111111-1111-4111-8111-111111111101";
 const barberId = "22222222-2222-4222-8222-222222222206";

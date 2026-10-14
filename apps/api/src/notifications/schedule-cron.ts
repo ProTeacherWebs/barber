@@ -1,6 +1,6 @@
-import "../env";
+import "../env.js";
 import { Prisma } from "@prisma/client";
-import { prisma } from "../prisma";
+import { prisma } from "../prisma.js";
 
 const url = process.env.SUPABASE_URL?.replace(/\/$/, "");
 const secret = process.env.CRON_SECRET?.trim();

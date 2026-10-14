@@ -1,7 +1,7 @@
 import { randomBytes } from "node:crypto";
 import type { PrismaClient } from "@prisma/client";
-import { ApiError } from "../http";
-import { botUsername } from "./client";
+import { ApiError } from "../http.js";
+import { botUsername } from "./client.js";
 
 export async function linkBookingClient(
   db: PrismaClient,

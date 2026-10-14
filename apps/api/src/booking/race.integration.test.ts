@@ -1,6 +1,6 @@
 import { afterAll, describe, expect, it } from "vitest";
-import { buildApp } from "../build-app";
-import { prisma } from "../prisma";
+import { buildApp } from "../build-app.js";
+import { prisma } from "../prisma.js";
 
 const phone = `+99890${String(Date.now()).slice(-7)}`;
 const serviceId = "11111111-1111-4111-8111-111111111101";

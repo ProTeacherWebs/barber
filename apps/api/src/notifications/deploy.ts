@@ -2,7 +2,7 @@ import { spawnSync } from "node:child_process";
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import "../env";
+import "../env.js";
 
 const url = process.env.SUPABASE_URL?.trim();
 const cronSecret = process.env.CRON_SECRET?.trim();

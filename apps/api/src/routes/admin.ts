@@ -2,12 +2,12 @@ import { randomUUID } from "node:crypto";
 import type { Prisma, PrismaClient } from "@prisma/client";
 import type { FastifyInstance } from "fastify";
 import { z } from "zod";
-import { checkPassword, clearSessionCookie, closeSession, hashPassword, openSession, requireAdmin, setSessionCookie } from "../admin/session";
-import { clearLoginLimit, loginLimited } from "../admin/rate-limit";
-import { createBooking, rescheduleBooking } from "../booking/service";
-import { notifyCancelled } from "../telegram/notify";
-import { ApiError } from "../http";
-import { prisma } from "../prisma";
+import { checkPassword, clearSessionCookie, closeSession, hashPassword, openSession, requireAdmin, setSessionCookie } from "../admin/session.js";
+import { clearLoginLimit, loginLimited } from "../admin/rate-limit.js";
+import { createBooking, rescheduleBooking } from "../booking/service.js";
+import { notifyCancelled } from "../telegram/notify.js";
+import { ApiError } from "../http.js";
+import { prisma } from "../prisma.js";
 
 const loginSchema = z.object({
   login: z.string().trim().min(1).max(80),

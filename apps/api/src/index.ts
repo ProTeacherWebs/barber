@@ -1,7 +1,7 @@
-import "./env";
+import "./env.js";
 import Fastify from "fastify";
-import { configureApp } from "./build-app";
-import { setupBotMenu } from "./telegram/handlers";
+import { configureApp } from "./build-app.js";
+import { setupBotMenu } from "./telegram/handlers.js";
 
 const app = configureApp(Fastify({ logger: true }));
 

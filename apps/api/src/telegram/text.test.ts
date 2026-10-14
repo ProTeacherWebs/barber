@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { confirmationText, parseStartPayload } from "./text";
+import { confirmationText, parseStartPayload } from "./text.js";
 
 describe("telegram payload", () => {
   it("разбирает deep link записи и барбера", () => {

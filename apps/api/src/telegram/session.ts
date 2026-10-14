@@ -1,6 +1,6 @@
 import type { PrismaClient } from "@prisma/client";
-import { ApiError } from "../http";
-import { resolveTelegramUser, telegramName, type TelegramUser } from "./init-data";
+import { ApiError } from "../http.js";
+import { resolveTelegramUser, telegramName, type TelegramUser } from "./init-data.js";
 
 export function readInitData(authorization: string | undefined): string {
   if (!authorization?.startsWith("tma ")) {

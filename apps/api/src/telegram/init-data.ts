@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
-import { ApiError } from "../http";
+import { ApiError } from "../http.js";
 
 const MAX_AGE_SEC = 60 * 60 * 24;
 

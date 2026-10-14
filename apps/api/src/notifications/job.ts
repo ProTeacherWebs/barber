@@ -1,7 +1,7 @@
 import { GrammyError, InlineKeyboard } from "grammy";
 import type { PrismaClient } from "@prisma/client";
-import { getBot } from "../telegram/client";
-import { dayReminderText, reviewRequestText, shortReminderText } from "../telegram/text";
+import { getBot } from "../telegram/client.js";
+import { dayReminderText, reviewRequestText, shortReminderText } from "../telegram/text.js";
 
 export type ClaimKind = "completed" | "day" | "short" | "review";
 

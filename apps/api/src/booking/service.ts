@@ -1,9 +1,9 @@
 import { randomBytes } from "node:crypto";
 import { Prisma, type PrismaClient } from "@prisma/client";
-import { ApiError, isSlotTakenError } from "../http";
-import { explainSlot, loadBarbers, loadSettings, quoteLines, slotsForBarber } from "./schedule";
-import { addDays, canCancel, normalizePhone, tashkentParts, todayIso } from "./time";
-import { notifyCancelled, notifyCreated, notifyRescheduled } from "../telegram/notify";
+import { ApiError, isSlotTakenError } from "../http.js";
+import { explainSlot, loadBarbers, loadSettings, quoteLines, slotsForBarber } from "./schedule.js";
+import { addDays, canCancel, normalizePhone, tashkentParts, todayIso } from "./time.js";
+import { notifyCancelled, notifyCreated, notifyRescheduled } from "../telegram/notify.js";
 
 const denialMessage = {
   TOO_SOON: "Это время уже слишком близко.",

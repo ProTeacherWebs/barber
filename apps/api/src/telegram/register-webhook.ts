@@ -1,5 +1,5 @@
-import "../env";
-import { getBot } from "./client";
+import "../env.js";
+import { getBot } from "./client.js";
 
 const url = process.env.TELEGRAM_WEBHOOK_URL?.trim();
 const secret = process.env.TELEGRAM_WEBHOOK_SECRET?.trim();

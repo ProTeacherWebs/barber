@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildAnalytics, type AnalyticsBooking } from "./analytics";
+import { buildAnalytics, type AnalyticsBooking } from "./analytics.js";
 
 const aziz = "22222222-2222-4222-8222-222222222201";
 const sardor = "22222222-2222-4222-8222-222222222206";

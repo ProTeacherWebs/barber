@@ -1,6 +1,6 @@
-import "../env";
-import { runNotifications } from "./job";
-import { prisma } from "../prisma";
+import "../env.js";
+import { runNotifications } from "./job.js";
+import { prisma } from "../prisma.js";
 
 try {
   const result = await runNotifications(prisma);

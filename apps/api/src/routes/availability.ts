@@ -1,7 +1,7 @@
 import type { FastifyInstance } from "fastify";
 import { z } from "zod";
-import { bookingIdByToken, listDays, listSlots } from "../booking/service";
-import { prisma } from "../prisma";
+import { bookingIdByToken, listDays, listSlots } from "../booking/service.js";
+import { prisma } from "../prisma.js";
 
 const querySchema = z.object({
   serviceIds: z.string().min(1),

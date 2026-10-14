@@ -2,8 +2,8 @@ import { createHash, randomBytes, randomUUID } from "node:crypto";
 import bcrypt from "bcryptjs";
 import type { FastifyReply, FastifyRequest } from "fastify";
 import { hash, verify } from "@node-rs/argon2";
-import { ApiError } from "../http";
-import { prisma } from "../prisma";
+import { ApiError } from "../http.js";
+import { prisma } from "../prisma.js";
 
 const cookieName = "kromka_admin";
 const maxAgeSec = 14 * 24 * 60 * 60;

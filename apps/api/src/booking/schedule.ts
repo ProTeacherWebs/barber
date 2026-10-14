@@ -1,6 +1,6 @@
 import { Prisma, type PrismaClient } from "@prisma/client";
-import { classifySlot, visibleSlots, type SlotInput } from "./slots";
-import { clockFromDb, clipToDay, dayEnd, dayStart, weekdayOf } from "./time";
+import { classifySlot, visibleSlots, type SlotInput } from "./slots.js";
+import { clockFromDb, clipToDay, dayEnd, dayStart, weekdayOf } from "./time.js";
 
 export type Settings = {
   slotStepMin: number;

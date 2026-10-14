@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { clearLoginLimit, loginLimited } from "./rate-limit";
+import { clearLoginLimit, loginLimited } from "./rate-limit.js";
 
 describe("лимит входа", () => {
   it("пускает 8 попыток и блокирует девятую", () => {

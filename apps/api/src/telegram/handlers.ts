@@ -1,10 +1,10 @@
 import { InlineKeyboard, Keyboard } from "grammy";
-import { ApiError } from "../http";
-import { cancelBooking, listMyBookings } from "../booking/service";
-import { prisma } from "../prisma";
-import { getBot } from "./client";
-import { linkBarber, linkBookingClient } from "./link";
-import { confirmationText, formatVisit, parseStartPayload } from "./text";
+import { ApiError } from "../http.js";
+import { cancelBooking, listMyBookings } from "../booking/service.js";
+import { prisma } from "../prisma.js";
+import { getBot } from "./client.js";
+import { linkBarber, linkBookingClient } from "./link.js";
+import { confirmationText, formatVisit, parseStartPayload } from "./text.js";
 
 const APP_URL = () => process.env.APP_URL?.replace(/\/$/, "") ?? "";
 const MINIAPP_URL = () => process.env.MINIAPP_URL?.replace(/\/$/, "") ?? "";

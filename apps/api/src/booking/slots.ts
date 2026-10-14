@@ -1,4 +1,4 @@
-import { addDays, formatMinutes, parseMinutes, todayIso, type ClockRange } from "./time";
+import { addDays, formatMinutes, parseMinutes, todayIso, type ClockRange } from "./time.js";
 
 export type SlotInput = {
   date: string;

@@ -1,6 +1,6 @@
 import type { FastifyInstance } from "fastify";
-import { prisma } from "../prisma";
-import { serviceSchema } from "../schemas";
+import { prisma } from "../prisma.js";
+import { serviceSchema } from "../schemas.js";
 
 export function registerServices(app: FastifyInstance) {
   app.get("/services", async () => {

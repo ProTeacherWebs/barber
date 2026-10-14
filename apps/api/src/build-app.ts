@@ -2,17 +2,17 @@ import cors from "@fastify/cors";
 import multipart from "@fastify/multipart";
 import Fastify, { type FastifyInstance } from "fastify";
 import { ZodError } from "zod";
-import { ApiError, errorBody } from "./http";
-import { prisma } from "./prisma";
-import { registerAvailability } from "./routes/availability";
-import { registerBarbers } from "./routes/barbers";
-import { registerBookings } from "./routes/bookings";
-import { registerHealth } from "./routes/health";
-import { registerWebhook } from "./routes/webhook";
-import { registerServices } from "./routes/services";
-import { registerTelegram } from "./routes/telegram";
-import { registerAdmin } from "./routes/admin";
-import { registerAnalytics } from "./admin/analytics-routes";
+import { ApiError, errorBody } from "./http.js";
+import { prisma } from "./prisma.js";
+import { registerAvailability } from "./routes/availability.js";
+import { registerBarbers } from "./routes/barbers.js";
+import { registerBookings } from "./routes/bookings.js";
+import { registerHealth } from "./routes/health.js";
+import { registerWebhook } from "./routes/webhook.js";
+import { registerServices } from "./routes/services.js";
+import { registerTelegram } from "./routes/telegram.js";
+import { registerAdmin } from "./routes/admin.js";
+import { registerAnalytics } from "./admin/analytics-routes.js";
 
 export function buildApp(options?: { logger?: boolean }): FastifyInstance {
   return configureApp(Fastify({ logger: options?.logger ?? true }));

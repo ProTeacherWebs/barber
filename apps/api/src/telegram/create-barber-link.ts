@@ -1,6 +1,6 @@
-import "../../src/env";
-import { prisma } from "../../src/prisma";
-import { createBarberLink } from "../../src/telegram/link";
+import "../env.js";
+import { prisma } from "../prisma.js";
+import { createBarberLink } from "./link.js";
 
 const barberId = process.argv[2];
 if (!barberId) {

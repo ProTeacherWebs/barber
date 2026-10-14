@@ -1,8 +1,8 @@
 import type { FastifyInstance } from "fastify";
 import { z } from "zod";
-import { cancelBooking, createBooking, getBooking, rescheduleBooking } from "../booking/service";
-import { prisma } from "../prisma";
-import { clientFromHeader } from "../telegram/session";
+import { cancelBooking, createBooking, getBooking, rescheduleBooking } from "../booking/service.js";
+import { prisma } from "../prisma.js";
+import { clientFromHeader } from "../telegram/session.js";
 
 const tokenSchema = z.object({ token: z.string().min(20).max(80) });
 

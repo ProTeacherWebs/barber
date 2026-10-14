@@ -1,6 +1,6 @@
 import type { PrismaClient } from "@prisma/client";
-import { getBot } from "./client";
-import { barberAlertText, cancelledText, confirmationText, rescheduledText } from "./text";
+import { getBot } from "./client.js";
+import { barberAlertText, cancelledText, confirmationText, rescheduledText } from "./text.js";
 
 async function send(chatId: string | null | undefined, text: string) {
   const bot = getBot();

@@ -1,11 +1,11 @@
 import type { PrismaClient } from "@prisma/client";
 import type { FastifyInstance } from "fastify";
 import { z } from "zod";
-import { dayEnd, dayStart } from "../booking/time";
-import { ApiError } from "../http";
-import { prisma } from "../prisma";
-import { buildAnalytics, type AnalyticsBooking } from "./analytics";
-import { requireAdmin } from "./session";
+import { dayEnd, dayStart } from "../booking/time.js";
+import { ApiError } from "../http.js";
+import { prisma } from "../prisma.js";
+import { buildAnalytics, type AnalyticsBooking } from "./analytics.js";
+import { requireAdmin } from "./session.js";
 
 const periodSchema = z.object({
   from: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),

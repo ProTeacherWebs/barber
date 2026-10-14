@@ -1,7 +1,7 @@
 import type { FastifyInstance } from "fastify";
 import type { Bot } from "grammy";
-import { getBot } from "../telegram/client";
-import { registerHandlers } from "../telegram/handlers";
+import { getBot } from "../telegram/client.js";
+import { registerHandlers } from "../telegram/handlers.js";
 
 export function registerWebhook(app: FastifyInstance) {
   app.post("/telegram/webhook", async (request, reply) => {

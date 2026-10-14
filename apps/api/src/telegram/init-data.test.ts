@@ -1,6 +1,6 @@
 import { createHmac } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { verifyInitData } from "./init-data";
+import { verifyInitData } from "./init-data.js";
 
 const token = "123456:TEST";
 

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { classifySlot, totalDuration, visibleSlots, type SlotInput } from "./slots";
-import { canCancel } from "./time";
+import { classifySlot, totalDuration, visibleSlots, type SlotInput } from "./slots.js";
+import { canCancel } from "./time.js";
 
 const open: Pick<SlotInput, "working" | "breaks" | "timeOff" | "bookings"> = {
   working: [{ startMin: 10 * 60, endMin: 21 * 60 }],
